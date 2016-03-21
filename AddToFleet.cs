@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace CSharpRobot
 {
-    class AddToFleet : RobotProperties
+    class AddToFleet 
     {
-       public TankBot TankBot = new TankBot();
-       public FlyingBot FlyingBot = new FlyingBot();
-       public RogueBot Rogue = new RogueBot();
-       public BossBot BossBot = new BossBot();
+        public List<RobotProperties> OrignalBossBotFleet = new List<RobotProperties>();
+        public List<RobotProperties> OrignalRobotFleet = new List<RobotProperties>();
+        public static List<RobotProperties> BossBotFleet = new List<RobotProperties>();
+        public static List<RobotProperties> robotfleet = new List<RobotProperties>();
+        public List<RobotProperties> RobotFleetHand = new List<RobotProperties>();
+        public TankBot TankBot = new TankBot();
+        public FlyingBot FlyingBot = new FlyingBot();
+        public RogueBot Rogue = new RogueBot();
+        public BossBot BossBot = new BossBot();
+    
 
-        public List<RobotProperties> BossBotAddToFleet()
+    public List<RobotProperties> BossBotAddToFleet()
         {
             OrignalBossBotFleet.Add(BossBot);
-
-            Console.WriteLine(BossBot.robotName);
 
             return OrignalBossBotFleet;
         }
@@ -25,7 +29,6 @@ namespace CSharpRobot
         public List<RobotProperties> CreateRobotArmy()
         {
             Random random = new Random();
-
 
             Console.WriteLine("Select the amount of robots in your army!");
             Console.WriteLine("As an added twist they're random, so you will not get to choose how many specific tank, healing, and flying bots you get");

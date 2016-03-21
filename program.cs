@@ -11,12 +11,12 @@ namespace CSharpRobot
    
         static void Main(string[] args)
         {
-            
+            MainMenu mainMenu = new MainMenu();
             bool runProgram = true;
 
             while (runProgram)
             {
-                MainMenu mainMenu = new MainMenu();
+                
                 mainMenu.theMainMenu();
             }
         }

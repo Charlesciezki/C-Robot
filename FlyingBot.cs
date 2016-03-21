@@ -11,8 +11,7 @@ namespace CSharpRobot
 
         public FlyingBot()
         {
-            Console.WriteLine("Enter a FlyBot name...");
-            this.robotName = Console.ReadLine();
+            this.robotName = "Flying Bot";
             batteryLife = 100;
         }
     }

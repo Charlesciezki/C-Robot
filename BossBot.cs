@@ -12,8 +12,7 @@ namespace CSharpRobot
         public BossBot()
         {
             HP = 100;          
-            Console.WriteLine("Enter a BossBot name...");
-            this.robotName = Console.ReadLine();
+            this.robotName = "Boss";
         }
     }
 }

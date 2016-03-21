@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpRobot
 {
-    class MainMenu : RobotProperties
+    class MainMenu : AddToFleet
     {
-        
-
+        public AddToFleet bossfleet = new AddToFleet();
+        public AddToFleet robotFleet = new AddToFleet();
+        public BattleBotMode battleBot = new BattleBotMode();
         public void theMainMenu()
         {
             
@@ -28,15 +29,12 @@ namespace CSharpRobot
                 {
                     case 1:
 
-                        AddToFleet bossfleet = new AddToFleet();
-                        BossBotFleet = bossfleet.BossBotAddToFleet();
-
-                        AddToFleet robotFleet = new AddToFleet();
+                        BossBotFleet = bossfleet.BossBotAddToFleet();                        
                         robotfleet = robotFleet.CreateRobotArmy();                        
                         break;
 
                     case 2:
-                       BattleBotMode battleBot = new BattleBotMode();
+                       
                        battleBot.battleBotMode();
                         break;
 

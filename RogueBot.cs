@@ -11,8 +11,7 @@ namespace CSharpRobot
 
         public RogueBot()
         {
-            Console.WriteLine("Enter a RogueBot name...");
-            this.robotName = Console.ReadLine();
+            this.robotName = "Rogue";
             batteryLife = 100;
         }
     }
